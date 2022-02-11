@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<script src="https://kit.fontawesome.com/bc6d9c9627.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700&display=swap" rel="stylesheet">	
+	<link rel="stylesheet" type="text/css" href="vendors/css/fluid.css">
+	<script src="https://smtpjs.com/v3/smtp.js"></script> 
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+	<script type="text/javascript">
+		function send() {
+			var name = document.getElementById("name").value;
+			var message = document.getElementById("message").value;
+			var email = document.getElementById("email").value;
+			var res = name.replace(" ","").localeCompare("");
+			var res2 = email.replace(" ","").localeCompare("");
+			var res1 = message.replace(" ","").localeCompare("");
+			if (res!=0) {
+				if (res2!=0) {
+					if (res1!=0) {
+						var mes = message.concat(" by ",name);
+						Email.send({
+							Host: "smtp.gmail.com",
+							Username : "nssmit2019@gmail.com",
+							Password : "bharath@1510",
+							To : email,
+							From : "nssmit2019@gmail.com",
+							Subject : "Query",
+							Body : mes
+						})
+						.then(
+							alert("mail sent successfully")
+						);
+					}
+					else{
+						alert("Please fill query and click Submit");
+					}	
+				}
+				else{
+					alert("Please fill Email");
+				}
+			}
+			else{
+				alert("Please fill your name");
+			}
+		}
+	</script>
+	<title>NATIONAL SERVICE SCHEME</title>
+</head>
+<body>
+	<header id = "home">
+		<nav>
+			<img src="resources/img/nssicon2.png" alt="NSS-logo" class = "logo">
+			<ul class ="main-nav">
+				<li><a href="#home">Home</a></li>	
+				<div class="dropdown">
+				  <a class="dropbtn">People</a>
+				  <div class="dropdown-content">
+					  <a href="#PO">Programme Officer</a>
+					  <a href="#vol">Volunteers</a>	
+					  <a href="#vol">Incharges</a>					  
+				  </div>
+				</div>			
+				<li><a href="#eve-act">Report</a></li>				
+				<li><a href="#award">Awards</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#query">Contact</a></li>				
+			</ul>
+		</nav>		
+	</header>
+	<section class = "slideshow">			
+		<div class="mySlides fade">
+	  		<img src="resources/img/1.jpg" style="width:100%">
+				<div class="text">Mountains</div>
+		</div>
+		<div class="mySlides fade">
+				<img src="resources/img/2.jpg" style="width:100%">
+				<div class="text">Environment</div>
+		</div>
+		<div class="mySlides fade">  		
+			<img src="resources/img/3.jpg" style="width:100%">
+				<div class="text">Chinese</div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</section>
+	<br>
+	<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>	
+	<div class="slide-show" id="award">
+		<h2 class="award-heading">Our Awards</h2>
+		<section class="award-section">
+			<div class="row">
+				<div class="col span_1_of_2 award-box">
+					<h2 class ="award-subheading">NATIONAL SERVICE SCHEME</h2>
+					<p class="award-para">The National Service Scheme (NSS) is a Central Sector Scheme of Government of India, Ministry of Youth Affairs & Sports.It provides opportunity to the student youth of 11th & 12th Class of schools at +2 Board level and student youth of Technical Institution, Graduate & Post Graduate at colleges and University level of India to take part in various government led community service activities & programmes.</p>					
+				</div>
+				<div class="col span_1_of_2 award-box">
+					<img src="resources/img/1.jpg" alt="Achievements by NSS" class="award-image">
+				</div>			
+			</div>			
+		</section>
+		<section class="award-section">
+			<div class="row">
+				<div class="col span_1_of_2 award-box">
+					<h2 class ="award-subheading">NATIONAL SERVICE SCHEME</h2>
+					<p class="award-para">The National Service Scheme (NSS) is a Central Sector Scheme of Government of India, Ministry of Youth Affairs & Sports.It provides opportunity to the student youth of 11th & 12th Class of schools at +2 Board level and student youth of Technical Institution, Graduate & Post Graduate at colleges and University level of India to take part in various government led community service activities & programmes.</p>					
+				</div>
+				<div class="col span_1_of_2 award-box">
+					<img src="resources/img/2.jpg" alt="Achievements by NSS" class="award-image">
+				</div>			
+			</div>			
+		</section>
+		<section class="award-section">
+			<div class="row">
+				<div class="col span_1_of_2 award-box">
+					<h2 class ="award-subheading">NATIONAL SERVICE SCHEME</h2>
+					<p class="award-para">The National Service Scheme (NSS) is a Central Sector Scheme of Government of India, Ministry of Youth Affairs & Sports.It provides opportunity to the student youth of 11th & 12th Class of schools at +2 Board level and student youth of Technical Institution, Graduate & Post Graduate at colleges and University level of India to take part in various government led community service activities & programmes.</p>					
+				</div>
+				<div class="col span_1_of_2 award-box">
+					<img src="resources/img/3.jpg" alt="Achievements by NSS" class="award-image">
+				</div>			
+			</div>			
+		</section>
+		<section class="award-section">
+			<div class="row">
+				<div class="col span_1_of_2 award-box">
+					<h2 class ="award-subheading">NATIONAL SERVICE SCHEME</h2>
+					<p class="award-para">The National Service Scheme (NSS) is a Central Sector Scheme of Government of India, Ministry of Youth Affairs & Sports.It provides opportunity to the student youth of 11th & 12th Class of schools at +2 Board level and student youth of Technical Institution, Graduate & Post Graduate at colleges and University level of India to take part in various government led community service activities & programmes.</p>					
+				</div>
+				<div class="col span_1_of_2 award-box">
+					<img src="resources/img/1.jpg" alt="Achievements by NSS" class="award-image">
+				</div>			
+			</div>			
+		</section>
+		<a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlide(1)">&#10095;</a>
+	</div>
+	<br>
+	<div style="text-align:center">
+  		<span class="dots" onclick="currentSlides(1)"></span> 
+  		<span class="dots" onclick="currentSlides(2)"></span> 
+  		<span class="dots" onclick="currentSlides(3)"></span> 
+  		<span class="dots" onclick="currentSlides(4)"></span> 
+	</div>
+	<section class="eve-act-section" id ="eve-act">
+		<h2 class="eve-act-heading1">Our WORKS</h2>
+		<div class="row">
+			<div class="col span_1_of_3">
+				<div class="eve-act-box"><br>					
+					<div>					
+						<h4 class="eve-act-heading">Session</h4>	
+						<p class="eve-act-subheading">2021-2022</p>					
+					</div>
+					<div>
+						<ul>
+							<li><i class="fas fa-check small-icon"></i><a target="_blank" href="resources/ext/INSTRUCTION TO CANDIDATES EXAM FEB2022.pdf">1st pdf</a></li>
+							<li><i class="fas fa-check small-icon"></i><a target="_blank" href="resources/ext/2019503509Lab8.pdf">2nd pdf</a></li>
+						</ul>
+					</div>
+					<div>						
+						<p class="eve-act-subheading">Upcoming Events</p>					
+					</div>
+					<div>
+						<ul>
+							<li><i class="fas fa-check small-icon"></i>1st pdf</li>							
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="col span_1_of_3">
+				<div class="eve-act-box"><br>					
+					<div>					
+						<h4 class="eve-act-heading">Camp</h4>	
+						<p class="eve-act-subheading">2019-2020</p>					
+					</div>
+					<div>
+						<ul>
+							<li><i class="fas fa-check small-icon"></i>1st pdf</li>							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="PO-section" id="PO">
+		<h2 class="PO-heading1">PROGRAMME OFFICERS</h2>
+		<div class="row">
+			<div class="col span_1_of_3">  
+				<a target="_blank" href="staff1.html" class="PO-nextpage">
+					<div class ="PO-box">
+						<div>					
+							<h4 class="PO-heading">Veerabadran K</h4>
+							<img src="resources/img/brand-logo-1.png" class="PO-image">							
+						</div>							
+					</div>	
+				</a>			
+			</div>
+			<div class="col span_1_of_3">  
+				<a target="_blank" href="staff1.html" class="PO-nextpage">
+					<div class ="PO-box">
+						<div>					
+							<h4 class="PO-heading">Veerabadran K</h4>
+							<img src="resources/img/brand-logo-2.png" class="PO-image">							
+						</div>							
+					</div>	
+				</a>			
+			</div>
+			<div class="col span_1_of_3">  
+				<a target="_blank" href="staff1.html" class="PO-nextpage">
+					<div class ="PO-box">
+						<div>					
+							<h4 class="PO-heading">Veerabadran K</h4>
+							<img src="resources/img/brand-logo-3.png" class="PO-image">							
+						</div>							
+					</div>	
+				</a>			
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col span_1_of_3">  
+				<a target="_blank" href="staff1.html" class="PO-nextpage">
+					<div class ="PO-box">
+						<div>					
+							<h4 class="PO-heading">Veerabadran K</h4>
+							<img src="resources/img/brand-logo-4.png" class="PO-image">							
+						</div>							
+					</div>	
+				</a>			
+			</div>
+			<div class="col span_1_of_3">  
+				<a target="_blank" href="staff1.html" class="PO-nextpage">
+					<div class ="PO-box">
+						<div>					
+							<h4 class="PO-heading">Veerabadran K</h4>
+							<img src="resources/img/brand-logo-5.png" class="PO-image">							
+						</div>							
+					</div>	
+				</a>			
+			</div>
+			<div class="col span_1_of_3">  
+				<a target="_blank" href="staff1.html" class="PO-nextpage">
+					<div class ="PO-box">
+						<div>					
+							<h4 class="PO-heading">Veerabadran K</h4>
+							<img src="resources/img/brand-logo-6.png" class="PO-image">							
+						</div>							
+					</div>	
+				</a>			
+			</div>			
+		</div>	
+		<div class="row">
+			<div class="col span_1_of_3">  
+				<a target="_blank" href="staff1.html" class="PO-nextpage">
+					<div class ="PO-box-1">
+						<div>					
+							<h4 class="PO-heading">Veerabadran K</h4>
+							<img src="resources/img/brand-logo-7.png" class="PO-image">							
+						</div>							
+					</div>	
+				</a>			
+			</div>	
+		</div>	
+	</section>
+	<section class="vol-list-section" id="vol">
+		<h2 class="vol-heading1">VOLUNTEERS</h2>
+		<div class="row">
+			<div class="col span_1_of_3">
+				<div class="vol-list-box">
+					<div>					
+						<h4 class="vol-list-heading">List</h4>	
+						<p class="vol-list-subheading">Years</p>					
+					</div>
+					<div>
+						<select name="years" id ="years"> 
+						  <option value="2021">2021</option>
+						  <option value="2020">2020</option>
+						  <option value="2019">2019</option>
+						  <option value="2018">2018</option>
+						</select>
+						<br>
+						<br>
+						<input type="button" value="View" onclick="check()">						
+					</div>
+				</div>
+			</div>
+			<div class="col span_2_of_3">
+				<div class="vol-list-box1">
+					<div class="vol-list-tabs">
+					  <a  href= "resources/ext/2019503509Lab8.pdf" target="_blank" class="vol-list-tab col span_1_of_4" id="t1" >Unit 1</a>
+					  <a class="vol-list-tab col span_1_of_4" >Unit 2</a>
+					  <a class="vol-list-tab col span_1_of_4" >Unit 3</a>
+					  <a class="vol-list-tab col span_1_of_4" >Unit 4</a>
+					  <a class="vol-list-tab col vol_span" >Unit 5</a>
+					  <a class="vol-list-tab col vol_span" >Unit 6</a>
+					  <a class="vol-list-tab col span_4_of_4" >Unit 7</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about-section" id="about">
+		<div class="row">
+			<div class="col span_1_of_2 about-box">
+				<h2 class ="about-heading">NATIONAL SERVICE SCHEME</h2>
+				<p class="about-para">The National Service Scheme (NSS) is a Central Sector Scheme of Government of India, Ministry of Youth Affairs & Sports.It provides opportunity to the student youth of 11th & 12th Class of schools at +2 Board level and student youth of Technical Institution, Graduate & Post Graduate at colleges and University level of India to take part in various government led community service activities & programmes.</p>
+				<a target="_blank" href="https://nss.gov.in/" class ="btn btn-ghost">Read more</a>
+			</div>
+			<div class="col span_1_of_2 about-box">
+				<img src="resources/img/1.png" alt="Achievements by NSS" class="about-image">
+			</div>			
+		</div>
+	</section>
+	<section class="query-section" id="query">			
+		<div class="row">
+			<h2 class="query-heading">QUERY</h2>	
+			<form method="post" class="query-form" >
+				<div class="row">
+					<div class="col span_1_of_3">
+						<label for = "name">Name</label>
+					</div>
+					<div class="col span_2_of_3">
+						<input type="text" name="name" id="name" placeholder="Your Name" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col span_1_of_3">
+						<label for = "email">Email</label>
+					</div>
+					<div class="col span_2_of_3">
+						<input type="text" name="email" id="email" placeholder="Your Email" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col span_1_of_3">
+						<label for ="message">Query</label>
+					</div>
+					<div class="col span_2_of_3">
+						<textarea name="message" id="message" placeholder="Your message" required></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col span_1_of_3">
+						&nbsp;
+					</div>
+					<div class="col span_2_of_3">
+						<input type="submit" onclick="send()">
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<footer>
+		<div class="row">			
+			<div class ="col span_1_of_2">
+				<ul class="social-links">
+					<li><a target="_blank" href="https://www.facebook.com/groups/nssmit12/"><i class="fab fa-facebook-f"></i></a></li>					
+					<li><a target="_blank" href="https://www.instagram.com/nss_mit/"><i class="fab fa-instagram"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<p>
+				The National Service Scheme (NSS) is a Central Sector Scheme of Government of India, Ministry of Youth Affairs & Sports.
+			</p>
+		</div>
+	</footer>
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+		var slideIndexs = 1;
+		showSlide(slideIndexs);
+		function plusSlide(n) {
+		  showSlide(slideIndexs += n);
+		}
+
+		function currentSlides(n) {
+		  showSlide(slideIndexs = n);
+		}
+
+		function showSlide(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("award-section");
+		  var dots = document.getElementsByClassName("dots");
+		  if (n > slides.length) {slideIndexs = 1}    
+		  if (n < 1) {slideIndexs = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndexs-1].style.display = "block";  
+		  dots[slideIndexs-1].className += " active";
+		}	
+		function check(){
+			var x = document.getElementById("years").selectedIndex;
+			if(x==0)
+			{
+				document.getElementById("t1").setAttribute("href", "resources/ext/2019503509Lab8.pdf");
+			}	
+			else if (x==1)
+			{
+				document.getElementById("t1").setAttribute("href", "resources/ext/INSTRUCTION TO CANDIDATES EXAM FEB2022.pdf");
+			}		
+			else if(x==2)
+			{
+				alert("2019");
+			}
+			else
+			{
+				alert("2018");
+			}
+		}			
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script src="resources/js/script.js"></script>
+
+</body>
+</html>
